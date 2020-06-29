@@ -1,0 +1,1032 @@
+
+
+HI-TECH Software PIC PRO Macro Assembler V9.83 build 10920 
+                                                                                               Sun Jun 21 18:56:26 2020
+
+HI-TECH Software Omniscient Code Generator (PRO mode) build 10920
+     1                           	processor	16F685
+     2                           	opt	pw 120
+     3                           	opt	pm
+     4                           	psect	idataCOMMON,global,class=CODE,delta=2
+     5                           	psect	cinit,global,class=CODE,delta=2
+     6                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	dataCOMMON,global,class=COMMON,space=1,delta=1
+     8                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     9                           	psect	maintext,global,class=CODE,delta=2
+    10                           	psect	text73,local,class=CODE,delta=2
+    11                           	psect	text74,local,class=CODE,delta=2
+    12                           	psect	text75,local,class=CODE,delta=2
+    13                           	psect	text76,local,class=CODE,delta=2
+    14                           	psect	text77,local,class=CODE,delta=2
+    15                           	psect	text78,local,class=CODE,delta=2
+    16                           	psect	text79,local,class=CODE,delta=2
+    17                           	psect	pa_nodes,global,class=CODE,delta=2
+    18                           	dabs	1,0x11E,1
+    19                           	dabs	1,0x11F,1
+    20                           	dabs	1,0x119,1
+    21                           	dabs	1,0x11A,1
+    22                           	dabs	1,0x11B,1
+    23                           	dabs	1,0x10F,1
+    24                           	dabs	1,0x10E,1
+    25                           	dabs	1,0x116,1
+    26                           	dabs	1,0x19D,1
+    27                           	dabs	1,0x19E,1
+    28                           	dabs	1,0x118,1
+    29                           	dabs	1,0x115,1
+    30                           	dabs	1,0x11E,1
+    31                           	dabs	1,0x11E,1
+    32                           	dabs	1,0x11F,1
+    33                           	dabs	1,0x11F,1
+    34                           	dabs	1,0x11E,1
+    35                           	dabs	1,0x11E,1
+    36                           	dabs	1,0x11E,1
+    37                           	dabs	1,0x11E,1
+    38                           	dabs	1,0x11E,1
+    39                           	dabs	1,0x11E,1
+    40                           	dabs	1,0x11F,1
+    41                           	dabs	1,0x11F,1
+    42                           	dabs	1,0x119,1
+    43                           	dabs	1,0x119,1
+    44                           	dabs	1,0x119,1
+    45                           	dabs	1,0x119,1
+    46                           	dabs	1,0x119,1
+    47                           	dabs	1,0x119,1
+    48                           	dabs	1,0x119,1
+    49                           	dabs	1,0x19E,1
+    50                           	dabs	1,0x118,1
+    51                           	dabs	1,0x11A,1
+    52                           	dabs	1,0x11A,1
+    53                           	dabs	1,0x11A,1
+    54                           	dabs	1,0x11A,1
+    55                           	dabs	1,0x11A,1
+    56                           	dabs	1,0x11A,1
+    57                           	dabs	1,0x11A,1
+    58                           	dabs	1,0x19E,1
+    59                           	dabs	1,0x11B,1
+    60                           	dabs	1,0x118,1
+    61                           	dabs	1,0x18C,1
+    62                           	dabs	1,0x116,1
+    63                           	dabs	1,0x116,1
+    64                           	dabs	1,0x116,1
+    65                           	dabs	1,0x116,1
+    66                           	dabs	1,0x11B,1
+    67                           	dabs	1,0x11B,1
+    68                           	dabs	1,0x19E,1
+    69                           	dabs	1,0x19E,1
+    70                           	dabs	1,0x19E,1
+    71                           	dabs	1,0x19E,1
+    72                           	dabs	1,0x19D,1
+    73                           	dabs	1,0x19D,1
+    74                           	dabs	1,0x19D,1
+    75                           	dabs	1,0x19D,1
+    76                           	dabs	1,0x19D,1
+    77                           	dabs	1,0x11B,1
+    78                           	dabs	1,0x118,1
+    79                           	dabs	1,0x118,1
+    80                           	dabs	1,0x118,1
+    81                           	dabs	1,0x118,1
+    82                           	dabs	1,0x118,1
+    83                           	dabs	1,0x118,1
+    84                           	dabs	1,0x115,1
+    85                           	dabs	1,0x115,1
+    86                           	dabs	1,0x115,1
+    87                           	dabs	1,0x115,1
+    88                           	dabs	1,0x18C,1
+    89                           	dabs	1,0x7E,2
+    90  000A                     
+    91                           	psect	idataCOMMON
+    92  0000                     __pidataCOMMON:	
+    93  011E                     _ANSEL	set	286	;_ANSEL
+    94  011F                     _ANSELH	set	287	;_ANSELH
+    95  0119                     _CM1CON0	set	281	;_CM1CON0
+    96  011A                     _CM2CON0	set	282	;_CM2CON0
+    97  011B                     _CM2CON1	set	283	;_CM2CON1
+    98  010F                     _EEADRH	set	271	;_EEADRH
+    99  010E                     _EEDATH	set	270	;_EEDATH
+   100  0116                     _IOCB	set	278	;_IOCB
+   101  019D                     _PSTRCON	set	413	;_PSTRCON
+   102  019E                     _SRCON	set	414	;_SRCON
+   103  0118                     _VRCON	set	280	;_VRCON
+   104  0115                     _WPUB	set	277	;_WPUB
+   105  08F0                     _ANS0	set	2288	;_ANS0
+   106  08F1                     _ANS1	set	2289	;_ANS1
+   107  08FA                     _ANS10	set	2298	;_ANS10
+   108  08FB                     _ANS11	set	2299	;_ANS11
+   109  08F2                     _ANS2	set	2290	;_ANS2
+   110  08F3                     _ANS3	set	2291	;_ANS3
+   111  08F4                     _ANS4	set	2292	;_ANS4
+   112  08F5                     _ANS5	set	2293	;_ANS5
+   113  08F6                     _ANS6	set	2294	;_ANS6
+   114  08F7                     _ANS7	set	2295	;_ANS7
+   115  08F8                     _ANS8	set	2296	;_ANS8
+   116  08F9                     _ANS9	set	2297	;_ANS9
+   117  08C8                     _C1CH0	set	2248	;_C1CH0
+   118  08C9                     _C1CH1	set	2249	;_C1CH1
+   119  08CD                     _C1OE	set	2253	;_C1OE
+   120  08CF                     _C1ON	set	2255	;_C1ON
+   121  08CE                     _C1OUT	set	2254	;_C1OUT
+   122  08CC                     _C1POL	set	2252	;_C1POL
+   123  08CA                     _C1R	set	2250	;_C1R
+   124  0CF5                     _C1SEN	set	3317	;_C1SEN
+   125  08C7                     _C1VREN	set	2247	;_C1VREN
+   126  08D0                     _C2CH0	set	2256	;_C2CH0
+   127  08D1                     _C2CH1	set	2257	;_C2CH1
+   128  08D5                     _C2OE	set	2261	;_C2OE
+   129  08D7                     _C2ON	set	2263	;_C2ON
+   130  08D6                     _C2OUT	set	2262	;_C2OUT
+   131  08D4                     _C2POL	set	2260	;_C2POL
+   132  08D2                     _C2R	set	2258	;_C2R
+   133  0CF4                     _C2REN	set	3316	;_C2REN
+   134  08D8                     _C2SYNC	set	2264	;_C2SYNC
+   135  08C6                     _C2VREN	set	2246	;_C2VREN
+   136  0C67                     _EEPGD	set	3175	;_EEPGD
+   137  08B4                     _IOCB4	set	2228	;_IOCB4
+   138  08B5                     _IOCB5	set	2229	;_IOCB5
+   139  08B6                     _IOCB6	set	2230	;_IOCB6
+   140  08B7                     _IOCB7	set	2231	;_IOCB7
+   141  08DF                     _MC1OUT	set	2271	;_MC1OUT
+   142  08DE                     _MC2OUT	set	2270	;_MC2OUT
+   143  0CF2                     _PULSR	set	3314	;_PULSR
+   144  0CF3                     _PULSS	set	3315	;_PULSS
+   145  0CF6                     _SR0	set	3318	;_SR0
+   146  0CF7                     _SR1	set	3319	;_SR1
+   147  0CE8                     _STRA	set	3304	;_STRA
+   148  0CE9                     _STRB	set	3305	;_STRB
+   149  0CEA                     _STRC	set	3306	;_STRC
+   150  0CEB                     _STRD	set	3307	;_STRD
+   151  0CEC                     _STRSYNC	set	3308	;_STRSYNC
+   152  08D9                     _T1GSS	set	2265	;_T1GSS
+   153  08C4                     _VP6EN	set	2244	;_VP6EN
+   154  08C0                     _VR0	set	2240	;_VR0
+   155  08C1                     _VR1	set	2241	;_VR1
+   156  08C2                     _VR2	set	2242	;_VR2
+   157  08C3                     _VR3	set	2243	;_VR3
+   158  08C5                     _VRR	set	2245	;_VRR
+   159  08AC                     _WPUB4	set	2220	;_WPUB4
+   160  08AD                     _WPUB5	set	2221	;_WPUB5
+   161  08AE                     _WPUB6	set	2222	;_WPUB6
+   162  08AF                     _WPUB7	set	2223	;_WPUB7
+   163  0C62                     _WREN	set	3170	;_WREN
+   164  000B                     _INTCON	set	11
+   165  001B                     _MSCON	set	27
+   166  0015                     _P1BDTH	set	21
+   167  000F                     _P1BDTL	set	15
+   168  0016                     _P1CON	set	22
+   169  0005                     _PORTA	set	5
+   170  0007                     _PORTC	set	7
+   171  0012                     _T2CON0	set	18
+   172  0013                     _TMR2H	set	19
+   173  0011                     _TMR2L	set	17
+   174  00CA                     _P1BALT	set	202
+   175  002A                     _RA2	set	42
+   176  002C                     _RA4	set	44
+   177  002D                     _RA5	set	45
+   178  0061                     _TMR2IF	set	97
+   179  0092                     _TMR2ON	set	146
+   180  0081                     _OPTION	set	129
+   181  008F                     _OSCCON	set	143
+   182  0090                     _P1OE	set	144
+   183  0099                     _P1POL	set	153
+   184  0092                     _PR2H	set	146
+   185  0091                     _PR2L	set	145
+   186  0097                     _PSINKA	set	151
+   187  009F                     _PSINKC	set	159
+   188  0088                     _PSRCA	set	136
+   189  0094                     _PSRCC	set	148
+   190  009E                     _T2CON1	set	158
+   191  0085                     _TRISA	set	133
+   192  0087                     _TRISC	set	135
+   193  0095                     _WPUA	set	149
+   194  0093                     _WPUC	set	147
+   195                           
+   196                           	psect	cinit
+   197  035F                     start_initialization:	
+   198  035F  3005               	movlw	5
+   199                           
+   200                           ; Clear objects allocated to COMMON
+   201  0360  01F5               	clrf	__pbssCOMMON& (0+127)
+   202  0361  01F6               	clrf	(__pbssCOMMON+1)& (0+127)
+   203  0362  01F7               	clrf	(__pbssCOMMON+2)& (0+127)
+   204                           
+   205                           ;initializer for _brigtness
+   206  0363  00F8               	movwf	__pdataCOMMON& (0+127)
+   207  0364  01F9               	clrf	(__pdataCOMMON+1)& (0+127)
+   208  0365                     end_of_initialization:	
+   209                           ;End of C runtime variable initialization code
+   210                           
+   211  0365  0183               	clrf	3
+   212  0366  2BBB               	ljmp	_main	;jump to C main() function
+   213                           
+   214                           	psect	bssCOMMON
+   215  0075                     __pbssCOMMON:	
+   216  0075                     _working_timer:	
+   217  0075                     	ds	2
+   218  0077                     _minute_cnt:	
+   219  0077                     	ds	1
+   220                           
+   221                           	psect	dataCOMMON
+   222  0078                     __pdataCOMMON:	
+   223  0078                     _brigtness:	
+   224  0078                     	ds	2
+   225                           
+   226                           	psect	cstackCOMMON
+   227  0070                     __pcstackCOMMON:	
+   228  0070                     ?_DEVICE_INIT:	
+   229  0070                     ??_DEVICE_INIT:	
+   230                           ; 0 bytes @ 0x0
+   231                           
+   232  0070                     ?_PWM1_INIT:	
+   233                           ; 0 bytes @ 0x0
+   234                           
+   235  0070                     ??_PWM1_INIT:	
+   236                           ; 0 bytes @ 0x0
+   237                           
+   238  0070                     ?_DELAY_125US:	
+   239                           ; 0 bytes @ 0x0
+   240                           
+   241  0070                     ??_DELAY_125US:	
+   242                           ; 0 bytes @ 0x0
+   243                           
+   244  0070                     ?_SetWorking:	
+   245                           ; 0 bytes @ 0x0
+   246                           
+   247  0070                     ??_SetWorking:	
+   248                           ; 0 bytes @ 0x0
+   249                           
+   250  0070                     ?_SetSleep:	
+   251                           ; 0 bytes @ 0x0
+   252                           
+   253  0070                     ??_SetSleep:	
+   254                           ; 0 bytes @ 0x0
+   255                           
+   256  0070                     ?_main:	
+   257                           ; 0 bytes @ 0x0
+   258                           
+   259  0070                     DELAY_125US@a:	
+   260                           ; 0 bytes @ 0x0
+   261                           
+   262                           
+   263                           ; 1 bytes @ 0x0
+   264  0070                     	ds	1
+   265  0071                     ?_DELAY_MS:	
+   266  0071                     DELAY_MS@Time:	
+   267                           ; 0 bytes @ 0x1
+   268                           
+   269                           
+   270                           ; 2 bytes @ 0x1
+   271  0071                     	ds	2
+   272  0073                     ??_DELAY_MS:	
+   273  0073                     DELAY_MS@a:	
+   274                           ; 0 bytes @ 0x3
+   275                           
+   276                           
+   277                           ; 2 bytes @ 0x3
+   278  0073                     	ds	2
+   279  0075                     ??_main:	
+   280                           
+   281                           	psect	maintext
+   282  03BB                     __pmaintext:	
+   283                           ; 0 bytes @ 0x5
+   284 ;;Data sizes: Strings 0, constant 0, data 2, bss 3, persistent 0 stack 0
+   285 ;;Auto spaces:   Size  Autos    Used
+   286 ;; COMMON          14      5      10
+   287 ;; BANK0           48      0       0
+   288 ;;
+   289 ;; Pointer list with targets:
+   290 ;;
+   291 ;; Critical Paths under _main in COMMON
+   292 ;;
+   293 ;;   _main->_DELAY_MS
+   294 ;;   _DELAY_MS->_DELAY_125US
+   295 ;;
+   296 ;; Critical Paths under _main in BANK0
+   297 ;;
+   298 ;;   None.
+   299 ;;
+   300 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   301 ;;
+   302 ;;
+   303 ;;Call Graph Tables:
+   304 ;;
+   305 ;; ---------------------------------------------------------------------------------
+   306 ;; (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   307 ;; ---------------------------------------------------------------------------------
+   308 ;; (0) _main                                                 0     0      0      60
+   309 ;;                        _DEVICE_INIT
+   310 ;;                          _PWM1_INIT
+   311 ;;                         _SetWorking
+   312 ;;                           _SetSleep
+   313 ;;                           _DELAY_MS
+   314 ;; ---------------------------------------------------------------------------------
+   315 ;; (1) _SetWorking                                           0     0      0       0
+   316 ;;                          _PWM1_INIT
+   317 ;; ---------------------------------------------------------------------------------
+   318 ;; (1) _DELAY_MS                                             4     2      2      60
+   319 ;;                                              1 COMMON     4     2      2
+   320 ;;                        _DELAY_125US
+   321 ;; ---------------------------------------------------------------------------------
+   322 ;; (1) _SetSleep                                             0     0      0       0
+   323 ;; ---------------------------------------------------------------------------------
+   324 ;; (2) _DELAY_125US                                          1     1      0      30
+   325 ;;                                              0 COMMON     1     1      0
+   326 ;; ---------------------------------------------------------------------------------
+   327 ;; (2) _PWM1_INIT                                            0     0      0       0
+   328 ;; ---------------------------------------------------------------------------------
+   329 ;; (1) _DEVICE_INIT                                          0     0      0       0
+   330 ;; ---------------------------------------------------------------------------------
+   331 ;; Estimated maximum stack depth 2
+   332 ;; ---------------------------------------------------------------------------------
+   333 ;; Call Graph Graphs:
+   334 ;; _main (ROOT)
+   335 ;;   _DEVICE_INIT
+   336 ;;   _PWM1_INIT
+   337 ;;   _SetWorking
+   338 ;;     _PWM1_INIT
+   339 ;;   _SetSleep
+   340 ;;   _DELAY_MS
+   341 ;;     _DELAY_125US
+   342 ;;
+   343 ;; Address spaces:
+   344 ;;Name               Size   Autos  Total    Cost      Usage
+   345 ;;SFR1                 0      0       0       2        0.0%
+   346 ;;BITSFR1              0      0       0       2        0.0%
+   347 ;;CODE                 0      0       0       0        0.0%
+   348 ;;DATA                 0      0       C       3        0.0%
+   349 ;;ABS                  0      0       A       6        0.0%
+   350 ;;NULL                 0      0       0       0        0.0%
+   351 ;;STACK                0      0       2       2        0.0%
+   352 ;;BANK0               30      0       0       5        0.0%
+   353 ;;BITBANK0            30      0       0       4        0.0%
+   354 ;;SFR0                 0      0       0       1        0.0%
+   355 ;;BITSFR0              0      0       0       1        0.0%
+   356 ;;COMMON               E      5       A       1       71.4%
+   357 ;;BITCOMMON            E      0       0       0        0.0%
+   358 ;;EEDATA             100      0       0       0        0.0%
+   359                           
+   360                           
+   361 ;; *************** function _main *****************
+   362 ;; Defined at:
+   363 ;;		line 187 in file "MS86F_PWM1_HALF.C"
+   364 ;; Parameters:    Size  Location     Type
+   365 ;;		None
+   366 ;; Auto vars:     Size  Location     Type
+   367 ;;		None
+   368 ;; Return value:  Size  Location     Type
+   369 ;;		None               void
+   370 ;; Registers used:
+   371 ;;		wreg, status,2, status,0, pclath, cstack
+   372 ;; Tracked objects:
+   373 ;;		On entry : 17F/0
+   374 ;;		On exit  : 0/0
+   375 ;;		Unchanged: FFE00/0
+   376 ;; Data sizes:     COMMON   BANK0
+   377 ;;      Params:         0       0
+   378 ;;      Locals:         0       0
+   379 ;;      Temps:          0       0
+   380 ;;      Totals:         0       0
+   381 ;;Total ram usage:        0 bytes
+   382 ;; Hardware stack levels required when called:    2
+   383 ;; This function calls:
+   384 ;;		_DEVICE_INIT
+   385 ;;		_PWM1_INIT
+   386 ;;		_SetWorking
+   387 ;;		_SetSleep
+   388 ;;		_DELAY_MS
+   389 ;; This function is called by:
+   390 ;;		Startup code after reset
+   391 ;; This function uses a non-reentrant model
+   392 ;;
+   393  03BB                     _main:	
+   394                           
+   395                           ;MS86F_PWM1_HALF.C: 188: DEVICE_INIT();
+   396                           
+   397                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   398  03BB  237F               	fcall	_DEVICE_INIT
+   399                           
+   400                           ;MS86F_PWM1_HALF.C: 189: PWM1_INIT();
+   401  03BC  239A               	fcall	_PWM1_INIT
+   402                           
+   403                           ;MS86F_PWM1_HALF.C: 191: working_timer=0;
+   404  03BD  01F5               	clrf	_working_timer
+   405  03BE  01F6               	clrf	_working_timer+1
+   406                           
+   407                           ;MS86F_PWM1_HALF.C: 192: minute_cnt=0;
+   408  03BF  01F7               	clrf	_minute_cnt
+   409                           
+   410                           ;MS86F_PWM1_HALF.C: 193: brigtness=0;
+   411  03C0  01F8               	clrf	_brigtness
+   412  03C1  01F9               	clrf	_brigtness+1
+   413                           
+   414                           ;MS86F_PWM1_HALF.C: 194: SetWorking();
+   415  03C2  2348               	fcall	_SetWorking
+   416  03C3                     l1946:	
+   417                           
+   418                           ;MS86F_PWM1_HALF.C: 196: {
+   419                           ;MS86F_PWM1_HALF.C: 197: if(minute_cnt<10)
+   420  03C3  300A               	movlw	10
+   421  03C4  0277               	subwf	_minute_cnt,w
+   422  03C5  1803               	skipnc
+   423  03C6  2BE4               	goto	l1960
+   424                           
+   425                           ;MS86F_PWM1_HALF.C: 198: {
+   426                           ;MS86F_PWM1_HALF.C: 199: brigtness++;
+   427  03C7  0AF8               	incf	_brigtness,f
+   428  03C8  1903               	skipnz
+   429  03C9  0AF9               	incf	_brigtness+1,f
+   430                           
+   431                           ;MS86F_PWM1_HALF.C: 200: if(brigtness<=200)P1BDTL=(unsigned char)(200-brigtness);
+   432  03CA  3000               	movlw	0
+   433  03CB  0279               	subwf	_brigtness+1,w
+   434  03CC  30C9               	movlw	201
+   435  03CD  1903               	skipnz
+   436  03CE  0278               	subwf	_brigtness,w
+   437  03CF  1803               	skipnc
+   438  03D0  2BD4               	goto	l1954
+   439  03D1  0878               	movf	_brigtness,w
+   440  03D2  3CC8               	sublw	200
+   441  03D3  2BDD               	goto	L1
+   442  03D4                     l1954:	
+   443                           
+   444                           ;MS86F_PWM1_HALF.C: 201: else if(brigtness<(200*2))P1BDTL=(unsigned char)(brigtness-200);
+   445  03D4  3001               	movlw	1
+   446  03D5  0279               	subwf	_brigtness+1,w
+   447  03D6  3090               	movlw	144
+   448  03D7  1903               	skipnz
+   449  03D8  0278               	subwf	_brigtness,w
+   450  03D9  1803               	skipnc
+   451  03DA  2BE0               	goto	l1958
+   452  03DB  0878               	movf	_brigtness,w
+   453  03DC  3E38               	addlw	56
+   454  03DD                     L1:	
+   455  03DD  1283               	bcf	3,5	;RP0=0, select bank0
+   456  03DE  008F               	movwf	15	;volatile
+   457  03DF  2BEE               	goto	l1970
+   458  03E0                     l1958:	
+   459                           
+   460                           ;MS86F_PWM1_HALF.C: 202: else brigtness=5;
+   461  03E0  3005               	movlw	5
+   462  03E1  00F8               	movwf	_brigtness
+   463  03E2  01F9               	clrf	_brigtness+1
+   464  03E3  2BEE               	goto	l1970
+   465  03E4                     l1960:	
+   466                           
+   467                           ;MS86F_PWM1_HALF.C: 204: else if(minute_cnt<(10+20))
+   468  03E4  301E               	movlw	30
+   469  03E5  0277               	subwf	_minute_cnt,w
+   470  03E6  1803               	skipnc
+   471  03E7  2BEA               	goto	l1964
+   472                           
+   473                           ;MS86F_PWM1_HALF.C: 205: {
+   474                           ;MS86F_PWM1_HALF.C: 206: SetSleep();
+   475  03E8  2357               	fcall	_SetSleep
+   476                           
+   477                           ;MS86F_PWM1_HALF.C: 207: }
+   478  03E9  2BEE               	goto	l1970
+   479  03EA                     l1964:	
+   480                           
+   481                           ;MS86F_PWM1_HALF.C: 208: else
+   482                           ;MS86F_PWM1_HALF.C: 209: {
+   483                           ;MS86F_PWM1_HALF.C: 210: SetWorking();
+   484  03EA  2348               	fcall	_SetWorking
+   485                           
+   486                           ;MS86F_PWM1_HALF.C: 211: working_timer=0;
+   487  03EB  01F5               	clrf	_working_timer
+   488  03EC  01F6               	clrf	_working_timer+1
+   489                           
+   490                           ;MS86F_PWM1_HALF.C: 212: minute_cnt=0;
+   491  03ED  01F7               	clrf	_minute_cnt
+   492  03EE                     l1970:	
+   493                           
+   494                           ;MS86F_PWM1_HALF.C: 213: }
+   495                           ;MS86F_PWM1_HALF.C: 215: working_timer++;
+   496  03EE  0AF5               	incf	_working_timer,f
+   497  03EF  1903               	skipnz
+   498  03F0  0AF6               	incf	_working_timer+1,f
+   499                           
+   500                           ;MS86F_PWM1_HALF.C: 216: if(working_timer>=(100*59))
+   501  03F1  3017               	movlw	23
+   502  03F2  0276               	subwf	_working_timer+1,w
+   503  03F3  300C               	movlw	12
+   504  03F4  1903               	skipnz
+   505  03F5  0275               	subwf	_working_timer,w
+   506  03F6  1C03               	skipc
+   507  03F7  2BFB               	goto	l1978
+   508                           
+   509                           ;MS86F_PWM1_HALF.C: 217: {
+   510                           ;MS86F_PWM1_HALF.C: 218: minute_cnt++;
+   511  03F8  0AF7               	incf	_minute_cnt,f
+   512                           
+   513                           ;MS86F_PWM1_HALF.C: 219: working_timer=0;
+   514  03F9  01F5               	clrf	_working_timer
+   515  03FA  01F6               	clrf	_working_timer+1
+   516  03FB                     l1978:	
+   517                           
+   518                           ;MS86F_PWM1_HALF.C: 220: }
+   519                           ;MS86F_PWM1_HALF.C: 221: DELAY_MS(10);
+   520  03FB  300A               	movlw	10
+   521  03FC  00F1               	movwf	?_DELAY_MS
+   522  03FD  01F2               	clrf	?_DELAY_MS+1
+   523  03FE  2367               	fcall	_DELAY_MS
+   524  03FF  2BC3               	goto	l1946
+   525  0400                     __end_of_main:	
+   526                           
+   527                           	psect	text73
+   528  0348                     __ptext73:	
+   529 ;; =============== function _main ends ============
+   530                           
+   531                           
+   532 ;; *************** function _SetWorking *****************
+   533 ;; Defined at:
+   534 ;;		line 166 in file "MS86F_PWM1_HALF.C"
+   535 ;; Parameters:    Size  Location     Type
+   536 ;;		None
+   537 ;; Auto vars:     Size  Location     Type
+   538 ;;		None
+   539 ;; Return value:  Size  Location     Type
+   540 ;;		None               void
+   541 ;; Registers used:
+   542 ;;		wreg, status,2, status,0, pclath, cstack
+   543 ;; Tracked objects:
+   544 ;;		On entry : 0/20
+   545 ;;		On exit  : 20/20
+   546 ;;		Unchanged: FFE00/0
+   547 ;; Data sizes:     COMMON   BANK0
+   548 ;;      Params:         0       0
+   549 ;;      Locals:         0       0
+   550 ;;      Temps:          0       0
+   551 ;;      Totals:         0       0
+   552 ;;Total ram usage:        0 bytes
+   553 ;; Hardware stack levels used:    1
+   554 ;; Hardware stack levels required when called:    1
+   555 ;; This function calls:
+   556 ;;		_PWM1_INIT
+   557 ;; This function is called by:
+   558 ;;		_main
+   559 ;; This function uses a non-reentrant model
+   560 ;;
+   561  0348                     _SetWorking:	
+   562  0348  3005               	movlw	5
+   563                           
+   564                           ;MS86F_PWM1_HALF.C: 167: RA2=0;
+   565                           
+   566                           ; Regs used in _SetWorking: [wreg+status,2+status,0+pclath+cstack]
+   567  0349  1283               	bcf	3,5	;RP0=0, select bank0
+   568  034A  1105               	bcf	5,2
+   569                           
+   570                           ;MS86F_PWM1_HALF.C: 168: RA5=0;
+   571  034B  1285               	bcf	5,5
+   572                           
+   573                           ;MS86F_PWM1_HALF.C: 169: brigtness=5;
+   574  034C  00F8               	movwf	_brigtness
+   575  034D  01F9               	clrf	_brigtness+1
+   576                           
+   577                           ;MS86F_PWM1_HALF.C: 170: PWM1_INIT();
+   578  034E  2B9A               	ljmp	l1876
+   579  034F                     __end_of_SetWorking:	
+   580                           
+   581                           	psect	text74
+   582  0367                     __ptext74:	
+   583 ;; =============== function _SetWorking ends ============
+   584                           
+   585                           
+   586 ;; *************** function _DELAY_MS *****************
+   587 ;; Defined at:
+   588 ;;		line 154 in file "MS86F_PWM1_HALF.C"
+   589 ;; Parameters:    Size  Location     Type
+   590 ;;  Time            2    1[COMMON] unsigned short 
+   591 ;; Auto vars:     Size  Location     Type
+   592 ;;  a               2    3[COMMON] unsigned short 
+   593 ;; Return value:  Size  Location     Type
+   594 ;;		None               void
+   595 ;; Registers used:
+   596 ;;		wreg, status,2, status,0, pclath, cstack
+   597 ;; Tracked objects:
+   598 ;;		On entry : 0/0
+   599 ;;		On exit  : 0/0
+   600 ;;		Unchanged: FFE00/0
+   601 ;; Data sizes:     COMMON   BANK0
+   602 ;;      Params:         2       0
+   603 ;;      Locals:         2       0
+   604 ;;      Temps:          0       0
+   605 ;;      Totals:         4       0
+   606 ;;Total ram usage:        4 bytes
+   607 ;; Hardware stack levels used:    1
+   608 ;; Hardware stack levels required when called:    1
+   609 ;; This function calls:
+   610 ;;		_DELAY_125US
+   611 ;; This function is called by:
+   612 ;;		_main
+   613 ;; This function uses a non-reentrant model
+   614 ;;
+   615  0367                     _DELAY_MS:	
+   616                           
+   617                           ;MS86F_PWM1_HALF.C: 155: unsigned short a;
+   618                           ;MS86F_PWM1_HALF.C: 157: Time<<=3;
+   619                           
+   620                           ; Regs used in _DELAY_MS: [wreg+status,2+status,0+pclath+cstack]
+   621  0367  1003               	clrc
+   622  0368  0DF1               	rlf	DELAY_MS@Time,f
+   623  0369  0DF2               	rlf	DELAY_MS@Time+1,f
+   624  036A  1003               	clrc
+   625  036B  0DF1               	rlf	DELAY_MS@Time,f
+   626  036C  0DF2               	rlf	DELAY_MS@Time+1,f
+   627  036D  1003               	clrc
+   628  036E  0DF1               	rlf	DELAY_MS@Time,f
+   629  036F  0DF2               	rlf	DELAY_MS@Time+1,f
+   630                           
+   631                           ;MS86F_PWM1_HALF.C: 159: for(a=0;a<Time;a++)
+   632  0370  01F3               	clrf	DELAY_MS@a
+   633  0371  01F4               	clrf	DELAY_MS@a+1
+   634  0372                     l1928:	
+   635  0372  0872               	movf	DELAY_MS@Time+1,w
+   636  0373  0274               	subwf	DELAY_MS@a+1,w
+   637  0374  1D03               	skipz
+   638  0375  2B78               	goto	u35
+   639  0376  0871               	movf	DELAY_MS@Time,w
+   640  0377  0273               	subwf	DELAY_MS@a,w
+   641  0378                     u35:	
+   642  0378  1803               	btfsc	3,0
+   643  0379  0008               	return
+   644                           
+   645                           ;MS86F_PWM1_HALF.C: 160: {
+   646                           ;MS86F_PWM1_HALF.C: 161: DELAY_125US();
+   647  037A  234F               	fcall	_DELAY_125US
+   648  037B  0AF3               	incf	DELAY_MS@a,f
+   649  037C  1903               	skipnz
+   650  037D  0AF4               	incf	DELAY_MS@a+1,f
+   651  037E  2B72               	goto	l1928
+   652  037F                     __end_of_DELAY_MS:	
+   653                           
+   654                           	psect	text75
+   655  0357                     __ptext75:	
+   656 ;; =============== function _DELAY_MS ends ============
+   657                           
+   658                           
+   659 ;; *************** function _SetSleep *****************
+   660 ;; Defined at:
+   661 ;;		line 173 in file "MS86F_PWM1_HALF.C"
+   662 ;; Parameters:    Size  Location     Type
+   663 ;;		None
+   664 ;; Auto vars:     Size  Location     Type
+   665 ;;		None
+   666 ;; Return value:  Size  Location     Type
+   667 ;;		None               void
+   668 ;; Registers used:
+   669 ;;		status,2
+   670 ;; Tracked objects:
+   671 ;;		On entry : 0/20
+   672 ;;		On exit  : 20/0
+   673 ;;		Unchanged: FFFDF/0
+   674 ;; Data sizes:     COMMON   BANK0
+   675 ;;      Params:         0       0
+   676 ;;      Locals:         0       0
+   677 ;;      Temps:          0       0
+   678 ;;      Totals:         0       0
+   679 ;;Total ram usage:        0 bytes
+   680 ;; Hardware stack levels used:    1
+   681 ;; This function calls:
+   682 ;;		Nothing
+   683 ;; This function is called by:
+   684 ;;		_main
+   685 ;; This function uses a non-reentrant model
+   686 ;;
+   687  0357                     _SetSleep:	
+   688                           
+   689                           ;MS86F_PWM1_HALF.C: 174: P1OE=0;
+   690                           
+   691                           ; Regs used in _SetSleep: [status,2]
+   692  0357  1683               	bsf	3,5	;RP0=1, select bank1
+   693  0358  0190               	clrf	16	;volatile
+   694                           
+   695                           ;MS86F_PWM1_HALF.C: 175: RA2=1;
+   696  0359  1283               	bcf	3,5	;RP0=0, select bank0
+   697  035A  1505               	bsf	5,2
+   698                           
+   699                           ;MS86F_PWM1_HALF.C: 176: RA5=1;
+   700  035B  1685               	bsf	5,5
+   701                           
+   702                           ;MS86F_PWM1_HALF.C: 177: P1BALT=0;
+   703  035C  1119               	bcf	25,2
+   704                           
+   705                           ;MS86F_PWM1_HALF.C: 178: RA4=1;
+   706  035D  1605               	bsf	5,4
+   707  035E  0008               	return
+   708  035F                     __end_of_SetSleep:	
+   709                           
+   710                           	psect	text76
+   711  034F                     __ptext76:	
+   712 ;; =============== function _SetSleep ends ============
+   713                           
+   714                           
+   715 ;; *************** function _DELAY_125US *****************
+   716 ;; Defined at:
+   717 ;;		line 145 in file "MS86F_PWM1_HALF.C"
+   718 ;; Parameters:    Size  Location     Type
+   719 ;;		None
+   720 ;; Auto vars:     Size  Location     Type
+   721 ;;  a               1    0[COMMON] unsigned char 
+   722 ;; Return value:  Size  Location     Type
+   723 ;;		None               void
+   724 ;; Registers used:
+   725 ;;		wreg, status,2, status,0
+   726 ;; Tracked objects:
+   727 ;;		On entry : 0/0
+   728 ;;		On exit  : 0/0
+   729 ;;		Unchanged: FFE00/0
+   730 ;; Data sizes:     COMMON   BANK0
+   731 ;;      Params:         0       0
+   732 ;;      Locals:         1       0
+   733 ;;      Temps:          0       0
+   734 ;;      Totals:         1       0
+   735 ;;Total ram usage:        1 bytes
+   736 ;; Hardware stack levels used:    1
+   737 ;; This function calls:
+   738 ;;		Nothing
+   739 ;; This function is called by:
+   740 ;;		_DELAY_MS
+   741 ;; This function uses a non-reentrant model
+   742 ;;
+   743  034F                     _DELAY_125US:	
+   744                           
+   745                           ;MS86F_PWM1_HALF.C: 146: unsigned char a;
+   746                           ;MS86F_PWM1_HALF.C: 148: for(a=0;a<125;a++)
+   747                           
+   748                           ; Regs used in _DELAY_125US: [wreg+status,2+status,0]
+   749  034F  01F0               	clrf	DELAY_125US@a
+   750  0350                     l800:	
+   751  0350  0064               	clrwdt	;#
+   752  0351  307D               	movlw	125
+   753  0352  0AF0               	incf	DELAY_125US@a,f
+   754  0353  0270               	subwf	DELAY_125US@a,w
+   755  0354  1803               	btfsc	3,0
+   756  0355  0008               	return
+   757  0356  2B50               	goto	l800
+   758  0357                     __end_of_DELAY_125US:	
+   759                           
+   760                           	psect	text77
+   761  039A                     __ptext77:	
+   762 ;; =============== function _DELAY_125US ends ============
+   763                           
+   764                           
+   765 ;; *************** function _PWM1_INIT *****************
+   766 ;; Defined at:
+   767 ;;		line 87 in file "MS86F_PWM1_HALF.C"
+   768 ;; Parameters:    Size  Location     Type
+   769 ;;		None
+   770 ;; Auto vars:     Size  Location     Type
+   771 ;;		None
+   772 ;; Return value:  Size  Location     Type
+   773 ;;		None               void
+   774 ;; Registers used:
+   775 ;;		wreg, status,2
+   776 ;; Tracked objects:
+   777 ;;		On entry : 20/0
+   778 ;;		On exit  : 20/20
+   779 ;;		Unchanged: FFE00/0
+   780 ;; Data sizes:     COMMON   BANK0
+   781 ;;      Params:         0       0
+   782 ;;      Locals:         0       0
+   783 ;;      Temps:          0       0
+   784 ;;      Totals:         0       0
+   785 ;;Total ram usage:        0 bytes
+   786 ;; Hardware stack levels used:    1
+   787 ;; This function calls:
+   788 ;;		Nothing
+   789 ;; This function is called by:
+   790 ;;		_SetWorking
+   791 ;;		_main
+   792 ;; This function uses a non-reentrant model
+   793 ;;
+   794  039A                     _PWM1_INIT:	
+   795  039A                     l1876:	
+   796                           ; Regs used in _PWM1_INIT: [wreg+status,2]
+   797                           
+   798                           
+   799                           ;MS86F_PWM1_HALF.C: 88: TRISA |= 0B00010000;
+   800  039A  1683               	bsf	3,5	;RP0=1, select bank1
+   801  039B  1605               	bsf	5,4	;volatile
+   802                           
+   803                           ;MS86F_PWM1_HALF.C: 91: T2CON0 = 0B00000001;
+   804  039C  3001               	movlw	1
+   805  039D  1283               	bcf	3,5	;RP0=0, select bank0
+   806  039E  0092               	movwf	18	;volatile
+   807                           
+   808                           ;MS86F_PWM1_HALF.C: 92: T2CON1 = 0B00000000;
+   809  039F  1683               	bsf	3,5	;RP0=1, select bank1
+   810  03A0  019E               	clrf	30	;volatile
+   811                           
+   812                           ;MS86F_PWM1_HALF.C: 93: PR2H = 0;
+   813  03A1  0192               	clrf	18	;volatile
+   814                           
+   815                           ;MS86F_PWM1_HALF.C: 94: PR2L = 200-1;
+   816  03A2  30C7               	movlw	199
+   817  03A3  0091               	movwf	17	;volatile
+   818                           
+   819                           ;MS86F_PWM1_HALF.C: 96: P1BDTH = 0;
+   820  03A4  1283               	bcf	3,5	;RP0=0, select bank0
+   821  03A5  0195               	clrf	21	;volatile
+   822                           
+   823                           ;MS86F_PWM1_HALF.C: 97: P1BDTL = 200-5;
+   824  03A6  30C3               	movlw	195
+   825  03A7  008F               	movwf	15	;volatile
+   826                           
+   827                           ;MS86F_PWM1_HALF.C: 101: P1OE = 0B01000000;
+   828  03A8  3040               	movlw	64
+   829  03A9  1683               	bsf	3,5	;RP0=1, select bank1
+   830  03AA  0090               	movwf	16	;volatile
+   831                           
+   832                           ;MS86F_PWM1_HALF.C: 104: P1POL = 0B00000000;
+   833  03AB  0199               	clrf	25	;volatile
+   834                           
+   835                           ;MS86F_PWM1_HALF.C: 105: P1CON = 0B00001000;
+   836  03AC  3008               	movlw	8
+   837  03AD  1283               	bcf	3,5	;RP0=0, select bank0
+   838  03AE  0096               	movwf	22	;volatile
+   839                           
+   840                           ;MS86F_PWM1_HALF.C: 106: TMR2H = 0;
+   841  03AF  0193               	clrf	19	;volatile
+   842                           
+   843                           ;MS86F_PWM1_HALF.C: 107: TMR2L = 0;
+   844  03B0  0191               	clrf	17	;volatile
+   845                           
+   846                           ;MS86F_PWM1_HALF.C: 108: TMR2IF = 0;
+   847  03B1  108C               	bcf	12,1
+   848                           
+   849                           ;MS86F_PWM1_HALF.C: 109: TMR2ON = 1;
+   850  03B2  1512               	bsf	18,2
+   851  03B3                     l794:	
+   852                           ;MS86F_PWM1_HALF.C: 110: while(TMR2IF==0) asm("clrwdt");
+   853                           
+   854  03B3  1283               	bcf	3,5	;RP0=0, select bank0
+   855  03B4  188C               	btfsc	12,1
+   856  03B5  2BB8               	goto	l796
+   857  03B6  0064               	clrwdt	;#
+   858  03B7  2BB3               	goto	l794
+   859  03B8                     l796:	
+   860                           
+   861                           ;MS86F_PWM1_HALF.C: 111: TRISA &= 0B11101111;
+   862  03B8  1683               	bsf	3,5	;RP0=1, select bank1
+   863  03B9  1205               	bcf	5,4	;volatile
+   864  03BA  0008               	return
+   865  03BB                     __end_of_PWM1_INIT:	
+   866                           
+   867                           	psect	text78
+   868  037F                     __ptext78:	
+   869 ;; =============== function _PWM1_INIT ends ============
+   870                           
+   871                           
+   872 ;; *************** function _DEVICE_INIT *****************
+   873 ;; Defined at:
+   874 ;;		line 52 in file "MS86F_PWM1_HALF.C"
+   875 ;; Parameters:    Size  Location     Type
+   876 ;;		None
+   877 ;; Auto vars:     Size  Location     Type
+   878 ;;		None
+   879 ;; Return value:  Size  Location     Type
+   880 ;;		None               void
+   881 ;; Registers used:
+   882 ;;		wreg, status,2
+   883 ;; Tracked objects:
+   884 ;;		On entry : 17F/0
+   885 ;;		On exit  : 17F/0
+   886 ;;		Unchanged: FFE80/0
+   887 ;; Data sizes:     COMMON   BANK0
+   888 ;;      Params:         0       0
+   889 ;;      Locals:         0       0
+   890 ;;      Temps:          0       0
+   891 ;;      Totals:         0       0
+   892 ;;Total ram usage:        0 bytes
+   893 ;; Hardware stack levels used:    1
+   894 ;; This function calls:
+   895 ;;		Nothing
+   896 ;; This function is called by:
+   897 ;;		_main
+   898 ;; This function uses a non-reentrant model
+   899 ;;
+   900  037F                     _DEVICE_INIT:	
+   901                           
+   902                           ;MS86F_PWM1_HALF.C: 53: OSCCON = 0B01110001;
+   903                           
+   904                           ; Regs used in _DEVICE_INIT: [wreg+status,2]
+   905  037F  3071               	movlw	113
+   906  0380  1683               	bsf	3,5	;RP0=1, select bank1
+   907  0381  008F               	movwf	15	;volatile
+   908                           
+   909                           ;MS86F_PWM1_HALF.C: 56: INTCON = 0B00000000;
+   910  0382  018B               	clrf	11	;volatile
+   911                           
+   912                           ;MS86F_PWM1_HALF.C: 57: OPTION = 0B00001000;
+   913  0383  3008               	movlw	8
+   914  0384  0081               	movwf	1	;volatile
+   915                           
+   916                           ;MS86F_PWM1_HALF.C: 59: PORTA = 0B00110000;
+   917  0385  3030               	movlw	48
+   918  0386  1283               	bcf	3,5	;RP0=0, select bank0
+   919  0387  0085               	movwf	5	;volatile
+   920                           
+   921                           ;MS86F_PWM1_HALF.C: 60: TRISA = 0B11001011;
+   922  0388  30CB               	movlw	203
+   923  0389  1683               	bsf	3,5	;RP0=1, select bank1
+   924  038A  0085               	movwf	5	;volatile
+   925                           
+   926                           ;MS86F_PWM1_HALF.C: 61: WPUA = 0B11001011;
+   927  038B  0095               	movwf	21	;volatile
+   928                           
+   929                           ;MS86F_PWM1_HALF.C: 63: PORTC = 0B00000000;
+   930  038C  1283               	bcf	3,5	;RP0=0, select bank0
+   931  038D  0187               	clrf	7	;volatile
+   932                           
+   933                           ;MS86F_PWM1_HALF.C: 64: TRISC = 0B11111111;
+   934  038E  30FF               	movlw	255
+   935  038F  1683               	bsf	3,5	;RP0=1, select bank1
+   936  0390  0087               	movwf	7	;volatile
+   937                           
+   938                           ;MS86F_PWM1_HALF.C: 65: WPUC = 0B11111111;
+   939  0391  0093               	movwf	19	;volatile
+   940                           
+   941                           ;MS86F_PWM1_HALF.C: 67: PSRCA = 0B11111111;
+   942  0392  0088               	movwf	8	;volatile
+   943                           
+   944                           ;MS86F_PWM1_HALF.C: 68: PSRCC = 0B11111111;
+   945  0393  0094               	movwf	20	;volatile
+   946                           
+   947                           ;MS86F_PWM1_HALF.C: 69: PSINKA = 0B11111111;
+   948  0394  0097               	movwf	23	;volatile
+   949                           
+   950                           ;MS86F_PWM1_HALF.C: 70: PSINKC = 0B11111111;
+   951  0395  009F               	movwf	31	;volatile
+   952                           
+   953                           ;MS86F_PWM1_HALF.C: 71: MSCON = 0B00110000;
+   954  0396  3030               	movlw	48
+   955  0397  1283               	bcf	3,5	;RP0=0, select bank0
+   956  0398  009B               	movwf	27	;volatile
+   957  0399  0008               	return
+   958  039A                     __end_of_DEVICE_INIT:	
+   959                           
+   960                           	psect	text79
+   961  0000                     __ptext79:	
+   962 ;; =============== function _DEVICE_INIT ends ============
+   963                           
+   964  007E                     btemp	set	126	;btemp
+   965  007E                     wtemp0	set	126
+
+
+HI-TECH Software PICC Macro Assembler V9.83 build 10920 
+Symbol Table                                                                                   Sun Jun 21 18:56:26 2020
+
+                  u35 0378                   _C1R 08CA                   _C2R 08D2                   l800 0350  
+                 l802 0000                   l811 0000                   l814 0000                   l808 0000  
+                 l791 0000                   l794 03B3                   l796 03B8                   l797 0000  
+                 _RA2 002A                   _RA4 002C                   _RA5 002D                   _SR0 0CF6  
+                 _SR1 0CF7                   _VR0 08C0                   _VR1 08C1                   _VR2 08C2  
+                 _VR3 08C3                   _VRR 08C5                  _C1OE 08CD                  _C2OE 08D5  
+                _C1ON 08CF                  l1900 0000                  _C2ON 08D7                  l1910 0000  
+                l1912 0000                  l1920 0000                  l1906 0000                  l1914 0000  
+                l1922 0000                  l1930 0000                  l1908 0000                  l1916 0000  
+                l1932 0000                  l1940 0000                  l1870 0000                  l1862 0000  
+                l1918 0000                  l1926 0000                  l1934 0000                  l1950 0000  
+                l1942 0000                  l1872 0000                  l1864 0000                  l1880 0000  
+                l1928 0372                  l1960 03E4                  l1944 0000                  l1936 0000  
+                l1874 0000                  l1866 0000                  l1890 0000                  l1882 0000  
+                l1970 03EE                  l1954 03D4                  l1946 03C3                  l1938 0000  
+                l1868 0000                  l1892 0000                  l1884 0000                  l1876 039A  
+                l1972 0000                  l1964 03EA                  l1894 0000                  l1886 0000  
+                l1878 0000                  l1966 0000                  l1958 03E0                  l1896 0000  
+                l1888 0000                  l1976 0000                  l1968 0000                  l1898 0000  
+                l1978 03FB                  _ANS0 08F0                  _ANS1 08F1                  _ANS2 08F2  
+                _ANS3 08F3                  _ANS4 08F4                  _ANS5 08F5                  _ANS6 08F6  
+                _ANS7 08F7                  _ANS8 08F8                  _ANS9 08F9                  _P1OE 0090  
+                _IOCB 0116                  _PR2H 0092                  _PR2L 0091                  _STRA 0CE8  
+                _STRB 0CE9                  _STRC 0CEA                  _STRD 0CEB                  _WREN 0C62  
+                _WPUA 0095                  _WPUB 0115                  _WPUC 0093                  _main 03BB  
+                btemp 007E  __size_of_DELAY_125US 0008                  start 0000      __end_of_DELAY_MS 037F  
+               _C1CH0 08C8                 _C1CH1 08C9                 _C2CH0 08D0                 _C2CH1 08D1  
+               _C1SEN 0CF5                 _C2REN 0CF4                 _C1POL 08CC                 _C2POL 08D4  
+               _C1OUT 08CE                 _C2OUT 08D6                 ?_main 0070                 _ANS10 08FA  
+               _ANS11 08FB                 _P1CON 0016                 _EEPGD 0C67                 _ANSEL 011E  
+               _P1POL 0099                 _IOCB4 08B4                 _IOCB5 08B5                 _IOCB6 08B6  
+               _IOCB7 08B7                 _T1GSS 08D9                 _MSCON 001B                 _VP6EN 08C4  
+               _TMR2H 0013                 _TMR2L 0011                 _PSRCA 0088                 _PSRCC 0094  
+               _PORTA 0005                 _PORTC 0007                 _SRCON 019E                 _PULSR 0CF2  
+               _PULSS 0CF3                 _TRISA 0085                 _TRISC 0087                 _VRCON 0118  
+               _WPUB4 08AC                 _WPUB5 08AD                 _WPUB6 08AE                 _WPUB7 08AF  
+__size_of_DEVICE_INIT 001B    __size_of_PWM1_INIT 0021                 status 0003                 wtemp0 007E  
+        __end_of_main 0400                ??_main 0075      __end_of_SetSleep 035F                _C1VREN 08C7  
+              _C2VREN 08C6                _C2SYNC 08D8                _EEADRH 010F                _EEDATH 010E  
+              _P1BALT 00CA                _P1BDTH 0015                _P1BDTL 000F                _ANSELH 011F  
+              _MC1OUT 08DF                _MC2OUT 08DE                _T2CON0 0012                _T2CON1 009E  
+              _INTCON 000B                _OSCCON 008F                _TMR2IF 0061                _PSINKA 0097  
+              _PSINKC 009F                _OPTION 0081                _TMR2ON 0092             DELAY_MS@a 0073  
+          _SetWorking 0348     __end_of_PWM1_INIT 03BB          __pdataCOMMON 0078             ?_DELAY_MS 0071  
+      __pcstackCOMMON 0070            ??_DELAY_MS 0073           ?_SetWorking 0070             ?_SetSleep 0070  
+          __pmaintext 03BB               _CM1CON0 0119               _CM2CON0 011A               _CM2CON1 011B  
+             _PSTRCON 019D               _STRSYNC 0CEC         ??_DELAY_125US 0070            ??_SetSleep 0070  
+       _working_timer 0075         ??_DEVICE_INIT 0070   __size_of_SetWorking 0007  end_of_initialization 0365  
+          _minute_cnt 0077   __end_of_DELAY_125US 0357          DELAY_125US@a 0070             _PWM1_INIT 039A  
+ __end_of_DEVICE_INIT 039A     __size_of_DELAY_MS 0018          DELAY_MS@Time 0071            ?_PWM1_INIT 0070  
+       __pidataCOMMON 0000   start_initialization 035F           _DELAY_125US 034F          ??_SetWorking 0070  
+   __size_of_SetSleep 0008           _DEVICE_INIT 037F           __pbssCOMMON 0075    __end_of_SetWorking 034F  
+         ??_PWM1_INIT 0070             _brigtness 0078              _DELAY_MS 0367              _SetSleep 0357  
+            __ptext73 0348              __ptext74 0367              __ptext75 0357              __ptext76 034F  
+            __ptext77 039A              __ptext78 037F              __ptext79 0000          ?_DELAY_125US 0070  
+       __size_of_main 0045          ?_DEVICE_INIT 0070  
